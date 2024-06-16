@@ -6,8 +6,6 @@ let lastModifiedDate = document.lastModified;
 
 outputFullYear.innerHTML = `${currentYear}`;
 outputLastModified.innerHTML = `${lastModifiedDate}`;
-console.log(lastModifiedDate);
-
 
 
 const mainNav = document.querySelector('.navigation');
@@ -99,9 +97,40 @@ const courses = [
     }
 ]
 
-const courseContainer = document.querySelector('.course-list');
-let courseBlock = '';
-courses.forEach(function(obj, index){
-    courseBlock += `<span class="course-item">${obj.subject}</span>`;
+
+
+const courseLoader = ( coursesFiltered ) => {
+    const courseContainer = document.querySelector('.course-list');
+    let courseBlock = '';
+
+    coursesFiltered.forEach(function(course, index){
+        courseBlock += `<span class="course-item">${course.title}</span>`;
+        // courseContainer.innerHTML += `<span class="course-item">${course.title}</span>`;
+    });
+    console.log( courses );
+
+    courseContainer.innerHTML = courseBlock;
+}
+
+courseLoader(courses);
+
+const menuItems = document.querySelectorAll( '.filter');
+menuItems.forEach( menu => {
+
+    menu.addEventListener( 'click', function(){
+
+        let menuRel = menu.getAttribute('rel');    
+        
+        if( menuRel == 'cse' || menuRel == "wdd") {
+            courseLoader(courses.filter( course => course.subject == menuRel.toUpperCase() ));
+        }
+        else
+        {
+            courseLoader(courses);
+        }
+        
+        
+
+    })
+
 });
-courseContainer.innerHTML = courseBlock;
