@@ -135,6 +135,18 @@ img {
     padding: 10px;
     margin: 10px;
 }
+
+.course-filter {    
+    padding: 15px 25px;
+    text-align: center;
+}
+.filter-link {    
+    display: inline-block;
+    justify-content: space-around;
+    background-color: var(--primary-bgcolor);
+    color: var(--white-color);
+    padding: 5px 25px;    
+}
 .course-item {
     background-color: var(--pink-color);
     color: var(--black-color);
