@@ -98,6 +98,18 @@ const courses = [
 ]
 
 
+const calculateCertificate = ( courses ) => {
+    let totalCredit = 0;
+    courses.forEach( course => {
+        totalCredit += course.credits;
+    });
+
+    document.querySelector(".total-credit").append(totalCredit);
+
+}
+
+calculateCertificate( courses );
+
 
 const courseLoader = ( coursesFiltered ) => {
     const courseContainer = document.querySelector('.course-list');
