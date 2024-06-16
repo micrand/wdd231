@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #20a4f3;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --grey-color: #DEDEDE;
+
+    --primary-bgcolor: #011627;
+    --bluepetrol-color: #2ec4b6;
+    --pink-color: #ff3366;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;    
+}
+
+nav ul {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bgcolor);
+}
+nav li:hover > a {
+    border-top:2px solid var(--pink-color);
+    background-color: #20a4f3;
+    color: var(--black-color);
+}
+nav li a {
+    display: block;
+    padding: 12px 25px;
+    color: var(--white-color);    
+}
+h2 {
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+h3 {
+    border-bottom: 1px solid var(--primary-bgcolor);
+    padding-bottom: 10px;
+    margin-bottom:20px;
+}
+
+header nav {
+    margin-top: 75px;
+}
+main {
+    display: grid;
+    grid-template-columns: auto 300px;
+}
+
+aside a {
+    color:var(--black-color);
+}
+aside li {
+    border:1px solid var(--black-color);
+}
+footer {
+    background-color:var(--primary-bgcolor);
+    color: var(--white-color);
+}
+footer a {
+    color:var(--white-color);
+}
+/* CUSTOM STYLES */
+.bg-primary {
+    background-color: #20a4f3;
+}
+.max-width {
+    width: 960px;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+.p20 {
+    padding:20px;
+}
+.p10 {
+    padding:10px;
+}
+.mt20 {
+    margin-top:20px;
+}
+.ml20 {
+    margin-left:20px;
+}
+.br10 {
+   border-radius:10px;
+}
+.b1 {
+    border:1px solid var(--grey-color);
+}
+.block {
+    display: flex;
+}
+.text-center {
+    text-align: center;
+}
+.align-right {
+    float:right;
+}
+.align-left {
+    float: left;
+}
+.profile-img {
+    position: relative;
+    right:0;
+    max-width: 200px;
+    float:right;
+}
+img {
+    border:1px solid var(--grey-color);
+    padding: 10px;
+    margin: 10px;
+}
+@media screen and (max-width: 768px) {
+    header, main, footer {
+        max-width: 100%;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
