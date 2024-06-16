@@ -145,7 +145,8 @@ img {
     justify-content: space-around;
     background-color: var(--primary-bgcolor);
     color: var(--white-color);
-    padding: 5px 25px;    
+    padding: 5px 55px;    
+    cursor: pointer;
 }
 .course-item {
     background-color: var(--pink-color);
