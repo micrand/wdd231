@@ -157,7 +157,7 @@ img {
     line-height: 42px;
 }
 .total-credit{
-    color: var(--pink-color);
+    color: var(--black-color);
 }
 @media screen and (max-width: 768px) {
     header, main, footer {
