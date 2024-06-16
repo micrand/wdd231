@@ -107,8 +107,6 @@ const courseLoader = ( coursesFiltered ) => {
         courseBlock += `<span class="course-item">${course.title}</span>`;
         // courseContainer.innerHTML += `<span class="course-item">${course.title}</span>`;
     });
-    console.log( courses );
-
     courseContainer.innerHTML = courseBlock;
 }
 
