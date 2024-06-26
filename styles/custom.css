@@ -1,0 +1,46 @@
+/* CUSTOM STYLES */
+.bg-primary {
+    background-color: #20a4f3;
+}
+.max-width {
+    width: 960px;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+.p20 {
+    padding:20px;
+}
+.p10 {
+    padding:10px;
+}
+.mt20 {
+    margin-top:20px;
+}
+.ml20 {
+    margin-left:20px;
+}
+.br10 {
+   border-radius:10px;
+}
+.b1 {
+    border:1px solid var(--grey-color);
+}
+.block {
+    display: flex;
+}
+.text-center {
+    text-align: center;
+}
+.align-right {
+    float:right;
+}
+.align-left {
+    float: left;
+}
+.profile-img {
+    position: relative;
+    right:0;
+    max-width: 200px;
+    float:right;
+}
