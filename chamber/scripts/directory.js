@@ -55,7 +55,7 @@ async function fetchData() {
             htmlMemberItem+=`<img src="${member.photourl}" alt="${member.firstname} ${member.lastname}" />`;
             htmlMemberItem+=`<h3>${member.firstname} ${member.lastname}</h3>`;
 			htmlMemberItem+=`<p>${member.address.city}</p>`;
-			htmlMemberItem+=`<a href="https://${member.address.city}" target="_blank" class="more">Details</a>`;
+			htmlMemberItem+=`<a href="https://${member.website}" target="_blank" class="more">Details</a>`;
             htmlMemberItem+='</section>';            
             directory.innerHTML = htmlMemberItem;                        
         });
