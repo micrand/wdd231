@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            WDD 231 Web Frontend development I - Randriamihaja Mickael
+        </title>
+        <meta name="keyword" content="WDD231, file and name convention, css normalization, css specificity, github, javascript review, Web frontend development I, BYU-Idaho">
+        <meta name="description" content="WDD 231 - Web frontend development I - Randriamihaja Mickael">
+        <meta name="author" content="Randriamihaja Mickael">             
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;500&display=swap" rel="stylesheet">        
+        <style>
+            .parent > p {
+                border: 1px solid red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header class="mx-auto max-width bg-primary">
+            <h1 class="p20">WDD 231 - Web frontend development I, - Mickael Randriamihaja</h1>            
+            <nav class="navigation">    
+                <a id="menu" href="#"></a>            
+                
+            </nav>
+        </header>
+        <main class="mx-auto max-width">
+            <div class="parent">
+                <p>Immediate child 1</p>
+                <p>Immediate child 2</p>
+                <div>
+                    <p>Nested child</p>
+                </div>
+
+                <p>Another immediate paragraph</p>
+            </div>
+        </main>
+        <footer class="mx-auto max-width p20 text-center">
+            &copy; <span id="currentyear"></span> - Randriamihaja Mickael - Madagascar<br>
+            Last Modification: <span id="lastmodified"></span>
+        </footer> 
+        <script type='module' src="scripts/index.js"></script>
+    </body>
+</html>
