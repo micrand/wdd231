@@ -19,7 +19,7 @@
         <link href="styles/chamber.css" rel="stylesheet">
         <link href="styles/subscribe.css" rel="stylesheet">
     </head>
-    <body>       
+    <body onload="ShowModal();">       
         <header class="mx-auto bg-light">
             <div class="container-md top-header">
                 <div class="logo">                    
@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label for="organization-title">Organization title</label>
                         <input type="text" name="organization-title" placeholder="Organization title" class="form-input" name="organization-id"
-                        pattern="/[A-Za-z0-9 _]/{7}">
+                        pattern="/[A-Za-z0-9_]{7}/">
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -83,8 +83,8 @@
                             <label for="membership-level">Membership level</label>
                         </h3>
                         <div>
-                            <h4>NP Membership</h4>
-                            <input type="radio" name="membership-level" id="membership-level" value="NP" /> NP Membership is for non profit organizations and there is no fee.
+                            <h4>NP Membership (*)</h4>
+                            <input type="radio" name="membership-level" id="membership-level" value="NP" />
                         </div>
                         <div>
                             <h4>Bronze Membership</h4>
@@ -100,11 +100,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="description">Business/organization's name</label>
-                        <textarea name="description" class="form-text" id="description"></textarea>
+                        (*)is for non profit organizations and there is no fee
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" class="form-text form-input" id="description"></textarea>
                     </div>
                     <div class="form-group">                        
-                        <button type="submit" name="submit-subscription" class="form-button">
+                        <button type="submit" name="submit-subscription" class="form-input">
                             Subscribe
                         </button>
                     </div>
@@ -123,6 +126,28 @@
                 </form>
             </section>
         </main>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4>Benefits of membership at the Chamber</h4>
+              <p>For joining the chamber Club, there are many benefits you can claim:</p>
+              <ul>
+                <li>
+                    Free access to the member informations for further contact
+                </li>
+                <li>
+                    Participate for free in all events organized by the chambers
+                </li>
+                <li>
+                    Access 7/7 and 24/24 for the member dashboard and follow the workflow to boost you business.
+                </li>
+              </ul>
+            </div>
+          
+          </div>
 
         <footer class="mx-auto max-width p20 text-center">
             <div class="container-md">
