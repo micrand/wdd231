@@ -19,7 +19,7 @@
         <link href="styles/chamber.css" rel="stylesheet">
         <link href="styles/subscribe.css" rel="stylesheet">
     </head>
-    <body onload="fetchData();">       
+    <body>       
         <header class="mx-auto bg-light">
             <div class="container-md top-header">
                 <div class="logo">                    
@@ -55,15 +55,16 @@
                 <form method="get" class="form-subscription" action="thankyou.html">
                     <div class="form-group">
                         <label for="firstname">First name</label>
-                        <input type="text" name="firstname" placeholder="First name" class="form-input" id="firstname">
+                        <input type="text" name="firstname" placeholder="First name" class="form-input" id="firstname" autocomplete="given-name">
                     </div>
                     <div class="form-group">
                         <label for="">Last name</label>
-                        <input type="text" name="lastname" placeholder="Last name" class="form-input" id="lastname">
+                        <input type="text" name="lastname" placeholder="Last name" class="form-input" id="lastname" autocomplete="family-name">
                     </div>
                     <div class="form-group">
                         <label for="organization-title">Organization title</label>
-                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" name="organization-id">
+                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" name="organization-id"
+                        pattern="/[A-Za-z0-9 _]/{7}">
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -71,27 +72,54 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile-phone">Mobile phone number</label>
-                        <input type="text" name="text" placeholder="Mobile" class="form-input" id="mobile-phone" required>
+                        <input type="text" name="tel" placeholder="Mobile" class="form-input" id="mobile-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div class="form-group">
                         <label for="business-name">Business/organization's name</label>
                         <input type="text" name="business-name" placeholder="Business name" class="form-input" id="business-name" required>
                     </div>
                     <div class="form-group">
-                        <h3>Membership level</h3>
+                        <h3>
+                            <label for="membership-level">Membership level</label>
+                        </h3>
+                        <div>
+                            <h4>NP Membership</h4>
+                            <input type="radio" name="membership-level" id="membership-level" value="NP" /> NP Membership is for non profit organizations and there is no fee.
+                        </div>
+                        <div>
+                            <h4>Bronze Membership</h4>
+                            <input type="radio" name="membership-level" value="Bronze" /> 
+                        </div>
+                        <div>
+                            <h4>Silver Membership</h4>
+                            <input type="radio" name="membership-level" value="Silver"  /> 
+                        </div>
+                        <div>
+                            <h4>Gold Membership</h4>
+                            <input type="radio" name="membership-level" value="Gold" />
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="description">Business/organization's name</label>
                         <textarea name="description" class="form-text" id="description"></textarea>
                     </div>
                     <div class="form-group">                        
-                        <button type="submit" name="submit-subscription" class="form-button" >
+                        <button type="submit" name="submit-subscription" class="form-button">
                             Subscribe
                         </button>
                     </div>
                     <div class="form-group hidden-fields">
                         <input type="hidden" name="timestamp" value="">
+                        <datalist id="names-list">
+                            <option>Adama</option>
+                            <option>Albert</option>
+                            <option>Aragon</option>
+                            <option>Aramis</option>
+                            <option>Merlin</option>
+                            <option>Gandalf</option>
+                        </datalist>
                     </div>
+
                 </form>
             </section>
         </main>
@@ -102,6 +130,7 @@
                 Last Modification: <span id="lastmodified"></span>
             </div>
         </footer>
+        
         <script src="scripts/subscribe.js"></script>
     </body>
 </html>
