@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
         <link href="styles/chamber-large.css" rel="stylesheet">
         <link href="styles/chamber.css" rel="stylesheet">
+        <link href="styles/subscribe.css" rel="stylesheet">
     </head>
     <body onload="fetchData();">       
         <header class="mx-auto bg-light">
@@ -36,8 +37,8 @@
                     <nav class="navigation">                    
                         <a href="index.html">Home</a>
                         <a href="#">Discover</a>
-                        <a href="directory.html" class="active">Directory</a>
-                        <a href="join.html">Join</a>
+                        <a href="directory.html">Directory</a>
+                        <a href="join.html" class="active">Join</a>
                     </nav>
                 </div>                
             </div>
@@ -46,16 +47,53 @@
 
             <div class="title-header">
                 <h2>
-                    Business Directory at Chamber of Commerce Ampitatafika
-                </h2>
-                <div class="directory-selection">
-                    <button id="grid-button" class="display">Grid</button>
-                    <button id="list-button" class="display">List</button>
-                </div>
+                    Join form at the Chamber of Commerce
+                </h2>                
             </div>
 
-            <article class="directory list">
-            </article>
+            <section class="form-join-wrapper">
+                <form method="get" class="form-subscription" action="thankyou.html">
+                    <div class="form-group">
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" placeholder="First name" class="form-input" id="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Last name</label>
+                        <input type="text" name="lastname" placeholder="Last name" class="form-input" id="lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="organization-title">Organization title</label>
+                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" name="organization-id">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="text" name="email" placeholder="Email addresse" class="form-input" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile-phone">Mobile phone number</label>
+                        <input type="text" name="text" placeholder="Mobile" class="form-input" id="mobile-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-name">Business/organization's name</label>
+                        <input type="text" name="business-name" placeholder="Business name" class="form-input" id="business-name" required>
+                    </div>
+                    <div class="form-group">
+                        <h3>Membership level</h3>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Business/organization's name</label>
+                        <textarea name="description" class="form-text" id="description"></textarea>
+                    </div>
+                    <div class="form-group">                        
+                        <button type="submit" name="submit-subscription" class="form-button" >
+                            Subscribe
+                        </button>
+                    </div>
+                    <div class="form-group hidden-fields">
+                        <input type="hidden" name="timestamp" value="">
+                    </div>
+                </form>
+            </section>
         </main>
 
         <footer class="mx-auto max-width p20 text-center">
@@ -64,6 +102,6 @@
                 Last Modification: <span id="lastmodified"></span>
             </div>
         </footer>
-        <script src="scripts/directory.js"></script>
+        <script src="scripts/subscribe.js"></script>
     </body>
 </html>
