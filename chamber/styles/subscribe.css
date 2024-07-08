@@ -37,6 +37,13 @@
     text-align: center;    
     animation: 2s infinite growshrink;
 }
+.help {
+    display: block;    
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
 @keyframes growshrink {
     25%,
     75% {

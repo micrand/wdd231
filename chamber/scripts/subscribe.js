@@ -1,51 +1,33 @@
-let hamburgerMenu = document.getElementById('hamburger-menu');
-hamburgerMenu.addEventListener( 'click', () => {
-    let navigationMenu = document.querySelector('.navigation');
-    if(navigationMenu.style.display == 'block')
-    {
-        navigationMenu.style.display = 'none';
-    } else {
-        navigationMenu.style.display = 'block';
-    }
-    
-});
-
-
 let timestampDate = document.getElementById('timestamp');
-// if(timestampData.value){
-//     timestampDate.value = Date.now();
-// }
+timestampDate.value = Date.now();
 
 
-let formDataContent = document.getElementById('form-subscription-data');
-
-const subscriptionDataUrl = location.href;
-
-let data = subscriptionDataUrl.split("?");
-let userData = data[1].split("&");
-
-let userItemHTML = '';
-userData.forEach( (item)=>{ 
-    let itemData = item.split("=");
-    let fieldLabel = itemData[0].toUpperCase();
-    let fieldValue = itemData[1];
-    if(itemData[0]!='submit-subscription') {
-        userItemHTML += `<div class="form-group"><span>${fieldLabel}</span>: <strong>${fieldValue}</strong></div>`;        
-    }
-    
-});
-formDataContent.innerHTML += userItemHTML;
-
+var elements = document.getElementsByClassName("help");
+var triggerModalFunction = function() {
+    let currentBenefit = this.getAttribute("rel");    
+    let currentPrice = this.getAttribute("data-price");    
+    ShowModal(currentBenefit, currentPrice);
+};
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', triggerModalFunction, false);
+}
 
 /* Handle Benefits modal */
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("benefit-modal");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
-function ShowModal() {
-  modal.style.display = "block";
+function ShowModal(b, p) {
+    modal.style.display = "block";
+    console.log(b, p);
+    let modalBenefit = document.querySelector('.benefit-offer');
+    let modalBenefitPrice = document.querySelector('.benefit-price');
+    modalBenefit.textContent = b;
+    modalBenefitPrice.textContent = p;
+    
 }
+
 if(span) {
     span.onclick = function() {
         modal.style.display = "none";

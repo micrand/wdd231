@@ -19,7 +19,7 @@
         <link href="styles/chamber.css" rel="stylesheet">
         <link href="styles/subscribe.css" rel="stylesheet">
     </head>
-    <body onload="ShowModal();">       
+    <body _onload="ShowModal();">       
         <header class="mx-auto bg-light">
             <div class="container-md top-header">
                 <div class="logo">                    
@@ -63,8 +63,9 @@
                     </div>
                     <div class="form-group">
                         <label for="organization-title">Organization title</label>
-                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" id="organization-title"
-                        >
+                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" id="organization-title" 
+                        autocomplete="organization-title" pattern="^[a-zA-Z 0-9](\-){7}$">
+                        <!-- ^[a-zA-Z]([\w -]*[a-zA-Z])?$ -->
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -83,20 +84,24 @@
                     </h3>
                     <div class="form-group">                        
                         <div class="membership-offer">
-                            <label for="np">NP Membership (*)</label>
+                            <label for="np">NP Membership (*) </label>
                             <input type="radio" name="membership-level" value="NP" id="np" />
+                            <span class="help help-1" rel="NP Membership" data-price="50">Benefit</span>
                         </div>
                         <div class="membership-offer">
                             <label for="bronze">Bronze Membership</label>
                             <input type="radio" name="membership-level" value="Bronze" id="bronze" /> 
+                            <span class="help help-2" rel="Bronze Membership" data-price="200">Benefit</span>
                         </div>
                         <div class="membership-offer">
                            <label for="silver">Silver Membership</label>
                             <input type="radio" name="membership-level" value="Silver" id="silver" /> 
+                            <span class="help help-3" rel="Silver Membership" data-price="400">Benefit</span>
                         </div>
                         <div class="membership-offer">
                             <label for="gold">Gold Membership</label>
                             <input type="radio" name="membership-level" value="Gold" id="gold" />
+                            <span class="help help-4" rel="Gold Membership" data-price="1000">Benefit</span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -119,22 +124,28 @@
             </section>
         </main>
 
-        <div id="myModal" class="modal">
+        <div id="benefit-modal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
-              <h4>Benefits of membership at the Chamber</h4>
+              <h4>Benefits of membership at the Chamber - Offer: <i class="benefit-offer"></i> $<i class="benefit-price"></i> </h4>
               <p>For joining the chamber Club, there are many benefits you can claim:</p>
               <ul>
                 <li>
                     Free access to the member informations for further contact
                 </li>
                 <li>
-                    Participate for free in all events organized by the chambers
+                    Participate for free in all events / special events organized by the chambers
                 </li>
                 <li>
                     Access 7/7 and 24/24 for the member dashboard and follow the workflow to boost you business.
+                </li>
+                <li>
+                    Event discounts
+                </li>
+                <li>
+                    Free online training through member dashboard
                 </li>
               </ul>
             </div>
@@ -147,7 +158,7 @@
                 Last Modification: <span id="lastmodified"></span>
             </div>
         </footer>
-        
+        <script src="scripts/menu.js"></script>
         <script src="scripts/subscribe.js"></script>
     </body>
 </html>
