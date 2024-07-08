@@ -27,13 +27,32 @@
     padding: 15px 25px;
     border-radius: 5px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
     color: var(--white-color);
     cursor: pointer;
 }
-
-
-
+.membership-offer {
+    border: 1px solid var(--bg-light);
+    border-radius: 5px;
+    text-align: center;
+}
+.membership-offer:hover {
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+.membership-offer label {    
+    display: block;
+    padding: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+.membership-offer input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /* The Modal benefit */
 .modal {
     display: none;

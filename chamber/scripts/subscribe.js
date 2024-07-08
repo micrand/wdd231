@@ -11,13 +11,30 @@ hamburgerMenu.addEventListener( 'click', () => {
 });
 
 
+let timestampDate = document.getElementById('timestamp');
+// if(timestampData.value){
+//     timestampDate.value = Date.now();
+// }
 
-let formData = document.getElementById('form-subscription-data');
+
+let formDataContent = document.getElementById('form-subscription-data');
 
 const subscriptionDataUrl = location.href;
 
-console.log(subscriptionDataUrl);
+let data = subscriptionDataUrl.split("?");
+let userData = data[1].split("&");
 
+let userItemHTML = '';
+userData.forEach( (item)=>{ 
+    let itemData = item.split("=");
+    let fieldLabel = itemData[0].toUpperCase();
+    let fieldValue = itemData[1];
+    if(itemData[0]!='submit-subscription') {
+        userItemHTML += `<div class="form-group"><span>${fieldLabel}</span>: <strong>${fieldValue}</strong></div>`;        
+    }
+    
+});
+formDataContent.innerHTML += userItemHTML;
 
 
 /* Handle Benefits modal */
@@ -29,9 +46,12 @@ var span = document.getElementsByClassName("close")[0];
 function ShowModal() {
   modal.style.display = "block";
 }
-span.onclick = function() {
-  modal.style.display = "none";
+if(span) {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 }
+
 
 window.onclick = function(event) {
   if (event.target == modal) {

@@ -58,45 +58,45 @@
                         <input type="text" name="firstname" placeholder="First name" class="form-input" id="firstname" autocomplete="given-name">
                     </div>
                     <div class="form-group">
-                        <label for="">Last name</label>
+                        <label for="lastname">Last name</label>
                         <input type="text" name="lastname" placeholder="Last name" class="form-input" id="lastname" autocomplete="family-name">
                     </div>
                     <div class="form-group">
                         <label for="organization-title">Organization title</label>
-                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" name="organization-id"
-                        pattern="/[A-Za-z0-9_]{7}/">
+                        <input type="text" name="organization-title" placeholder="Organization title" class="form-input" id="organization-title"
+                        >
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="text" name="email" placeholder="Email addresse" class="form-input" id="email">
+                        <input type="text" name="email" placeholder="yourname@site.com" class="form-input" id="email">
                     </div>
                     <div class="form-group">
                         <label for="mobile-phone">Mobile phone number</label>
-                        <input type="text" name="tel" placeholder="Mobile" class="form-input" id="mobile-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <input type="text" name="tel" placeholder="123-456-7890" class="form-input" id="mobile-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div class="form-group">
                         <label for="business-name">Business/organization's name</label>
                         <input type="text" name="business-name" placeholder="Business name" class="form-input" id="business-name" required>
                     </div>
-                    <div class="form-group">
-                        <h3>
-                            <label for="membership-level">Membership level</label>
-                        </h3>
-                        <div>
-                            <h4>NP Membership (*)</h4>
-                            <input type="radio" name="membership-level" id="membership-level" value="NP" />
+                    <h3>
+                        Membership level
+                    </h3>
+                    <div class="form-group">                        
+                        <div class="membership-offer">
+                            <label for="np">NP Membership (*)</label>
+                            <input type="radio" name="membership-level" value="NP" id="np" />
                         </div>
-                        <div>
-                            <h4>Bronze Membership</h4>
-                            <input type="radio" name="membership-level" value="Bronze" /> 
+                        <div class="membership-offer">
+                            <label for="bronze">Bronze Membership</label>
+                            <input type="radio" name="membership-level" value="Bronze" id="bronze" /> 
                         </div>
-                        <div>
-                            <h4>Silver Membership</h4>
-                            <input type="radio" name="membership-level" value="Silver"  /> 
+                        <div class="membership-offer">
+                           <label for="silver">Silver Membership</label>
+                            <input type="radio" name="membership-level" value="Silver" id="silver" /> 
                         </div>
-                        <div>
-                            <h4>Gold Membership</h4>
-                            <input type="radio" name="membership-level" value="Gold" />
+                        <div class="membership-offer">
+                            <label for="gold">Gold Membership</label>
+                            <input type="radio" name="membership-level" value="Gold" id="gold" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -107,20 +107,12 @@
                         <textarea name="description" class="form-text form-input" id="description"></textarea>
                     </div>
                     <div class="form-group">                        
-                        <button type="submit" name="submit-subscription" class="form-input">
+                        <button type="submit" name="submit-subscription" class="form-button">
                             Subscribe
                         </button>
                     </div>
                     <div class="form-group hidden-fields">
-                        <input type="hidden" name="timestamp" value="">
-                        <datalist id="names-list">
-                            <option>Adama</option>
-                            <option>Albert</option>
-                            <option>Aragon</option>
-                            <option>Aramis</option>
-                            <option>Merlin</option>
-                            <option>Gandalf</option>
-                        </datalist>
+                        <input type="hidden" name="timestamp" id="timestamp">                        
                     </div>
 
                 </form>
