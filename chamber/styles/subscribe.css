@@ -34,7 +34,19 @@
 .membership-offer {
     border: 1px solid var(--bg-light);
     border-radius: 5px;
-    text-align: center;
+    text-align: center;    
+    animation: 2s infinite growshrink;
+}
+@keyframes growshrink {
+    25%,
+    75% {
+        scale: 90%;
+    }
+
+  50% {
+    scale: 105%;
+    color: magenta;
+  }
 }
 .membership-offer:hover {
     border: 1px solid var(--primary-color);
