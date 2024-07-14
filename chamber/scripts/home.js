@@ -3,23 +3,24 @@ test({"coord":{"lon":47.5361,"lat":-18.9137},"weather":[{"id":802,"main":"Clouds
 */
 
 /*
-https://pro.openweathermap.org/data/2.5/forecast/hourly?lat={lat}&lon={lon}&appid={API key}
 https://api.openweathermap.org/data/3.0/onecall?lat=-18.9137&lon=47.5361&exclude={part}&appid=8f2777c81989fefc599b589b71b3e109
+https://api.openweathermap.org/data/2.5/forecast?lat=18.9137&lon=47.5361&appid=8f2777c81989fefc599b589b71b3e109
 */
 const API_TOKEN = '8f2777c81989fefc599b589b71b3e109';
 const LON = '47.5361';
 const LAT = '-18.9137';
 
-const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_TOKEN}`;
+const currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_TOKEN}`;
+const forecastWeatherApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&appid=${API_TOKEN}`;
 
 
 function currentWeather() {    
     let currentWeatherBlock = document.getElementById('current-weather');
     let currentWeatherData = '';
-    fetch(weatherApiUrl)  
+    fetch(currentWeatherApiUrl)  
         .then(function(resp) { return resp.json() }) // Convert data to json
         .then(function(data) {
-            console.log( data );
+            // console.log( data );
             currentWeatherData += '<ul>';
             currentWeatherData += `<li>${data.main.temp}°F</li>`;
             currentWeatherData += `<li>${data.weather[0].main}</li>`;  
@@ -36,12 +37,50 @@ function currentWeather() {
   }
 
 function forecastWeather() {
+
     let wfBlock = document.getElementById('weather-forecast');
     let wfHtmlData = '<ul>';
+    let i = 0;
+    let j = 0;
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-    wfHtmlData += `<li>Today: </li>`;
-    wfHtmlData += `<li>Yesterday: </li>`;
-    wfHtmlData += `</ul>`;
+
+    fetch(forecastWeatherApiUrl)  
+        .then(function(resp) { return resp.json() }) // Convert data to json
+        .then(function(data) {
+            console.log( data );
+            wfHtmlData += `<ul>`;
+            
+            data.list.forEach( (item) => {
+                
+                if(j < 3) {
+                    let date = new Date( item.dt );
+                    let dayIndex = date.getDay();
+
+                    j++;
+                    console.log( item )
+                    wfHtmlData += `<li>${weekday[dayIndex]}: ${item.main.temp}°F</li>`;
+                }
+            });
+            wfHtmlData += `</ul>`;
+
+
+
+            // currentWeatherData += '<ul>';
+            // currentWeatherData += `<li>${data.main.temp}°F</li>`;
+            // currentWeatherData += `<li>${data.weather[0].main}</li>`;  
+            // currentWeatherData += `<li>High: ${data.main.temp_max}</li>`;  
+            // currentWeatherData += `<li>Low: ${data.main.temp_min}</li>`;  
+            // currentWeatherData += '</ul>';
+
+            wfBlock.innerHTML = wfHtmlData ;
+
+        })
+        .catch(function(error) {
+            console.log( error );
+        });
+
+   
 
 
     wfBlock.innerHTML = wfHtmlData;
@@ -66,9 +105,9 @@ async function fetchMemberData() {
         jsonData.forEach( (member)=>{
             htmlMemberItem+='<div class="business-item">';
             htmlMemberItem+=`<img src="${member.photourl}" alt="${member.firstname} ${member.lastname}" />`;
-            htmlMemberItem+=`<h3>${member.firstname} ${member.lastname}</h3>`;
+            htmlMemberItem+=`<h4>${member.firstname} ${member.lastname}</h4>`;
 			htmlMemberItem+=`<p>${member.address.city}</p>`;
-			htmlMemberItem+=`<a href="https://${member.website}" target="_blank" class="more">Details</a>`;
+			//htmlMemberItem+=`<a href="https://${member.website}" target="_blank" class="more">Details</a>`;
             htmlMemberItem+='</div>';            
             directory.innerHTML = htmlMemberItem;                        
         });
