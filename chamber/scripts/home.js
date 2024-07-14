@@ -9,10 +9,21 @@ const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT
 
 
 function currentWeather() {    
+    let currentWeatherBlock = document.getElementById('current-weather');
+    let currentWeatherData = '';
     fetch(weatherApiUrl)  
         .then(function(resp) { return resp.json() }) // Convert data to json
         .then(function(data) {
-            console.log(data);
+            console.log( data );
+            currentWeatherData += '<ul>';
+            currentWeatherData += `<li>${data.main.temp}°F</li>`;
+            currentWeatherData += `<li>${data.weather[0].main}</li>`;  
+            currentWeatherData += `<li>High: ${data.main.temp_max}</li>`;  
+            currentWeatherData += `<li>Low: ${data.main.temp_min}</li>`;  
+            currentWeatherData += '</ul>';
+
+            currentWeatherBlock.innerHTML = currentWeatherData ;
+
         })
         .catch(function(error) {
             console.log( error );
@@ -20,6 +31,6 @@ function currentWeather() {
   }
 
 window.onload = function(){
-    let currentWeatherBlock = document.getElementById('current-weather');
     
+    currentWeather();    
 }
