@@ -3,6 +3,11 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 a {
     text-decoration: none;
 }
@@ -102,6 +107,13 @@ footer {
     text-align: center;
     background-color: var(--black-color);
     padding: 25px 50px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 764px) {

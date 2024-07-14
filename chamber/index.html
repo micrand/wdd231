@@ -17,13 +17,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
         <link href="styles/chamber-large.css" rel="stylesheet">
         <link href="styles/chamber.css" rel="stylesheet">
+        <link href="styles/home.css" rel="stylesheet">
     </head>
-    <body onload="fetchData();">       
+    <body>       
         <header class="mx-auto bg-light">
             <div class="container-md top-header">
                 <div class="logo">                    
                     <a href="">
-                        <img src="images/chamber-ampitatafika.svg" alt="" width="120">
+                        <img src="images/chamber-ampitatafika.svg" alt="Chamber of Commerce - Ampitatafika, by Mickael Randriamihaja" width="120">
                     </a>
                 </div>
                 <div class="slogan">
@@ -34,9 +35,9 @@
                         <i class="fa fa-bars"></i>
                     </a>                 
                     <nav class="navigation">                    
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="active">Home</a>
                         <a href="#">Discover</a>
-                        <a href="directory.html" class="active">Directory</a>
+                        <a href="directory.html">Directory</a>
                         <a href="join.html">Join</a>
                     </nav>
                 </div>                
@@ -44,18 +45,57 @@
         </header>
         <main class="container-md">
 
-            <div class="title-header">
-                <h2>
-                    Business Directory at Chamber of Commerce Ampitatafika
-                </h2>
-                <div class="directory-selection">
-                    <button id="grid-button" class="display">Grid</button>
-                    <button id="list-button" class="display">List</button>
-                </div>
+            <div class="hero">
+
             </div>
 
-            <article class="directory list">
-            </article>
+            <section>
+                <h2>Home</h2>
+                <div class="home-part1">
+                    <div class="events">
+                        <h3 class="header-title">Events</h3>
+                    </div>
+                    <div class="current-weather">
+                        <h3 class="header-title">Current Weather</h3>
+                        <div id="current-weather">
+                        </div>
+                    </div>
+                    <div class="weather-forecast">
+                        <h3 class="header-title">Weather forecast</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="business-list mt20 mb20">
+                <div class="business-item">
+                    <h3>Business name <span class="business-tagline">Business tagline</span></h3>  
+                    <div class="business-content">
+                        <div class="business-photo">
+                            <figure>
+                                <img src="images/chamber-ampitatafika.png" alt="" width="20" />
+                            </figure>
+                        </div>
+                        <div class="business-info">
+                            <h4>Bsiness info tile</h4>
+                            <p>BUusisnsskl</p>
+                        </div>
+                    </div>                  
+                </div>  
+                <div class="business-item">
+                    <h3>Business name <span class="business-tagline">Business tagline</span></h3>
+                    <div class="business-content">
+
+                    </div>
+                </div>  
+                <div class="business-item">
+                    <h3>Business name <span class="business-tagline">Business tagline</span></h3>
+                    <div class="business-content">
+                        
+                    </div>
+                </div>                
+            </section>
+
+            
         </main>
 
         <footer class="mx-auto max-width p20 text-center">
@@ -64,6 +104,7 @@
                 Last Modification: <span id="lastmodified"></span>
             </div>
         </footer>
-        <script src="scripts/directory.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/home.js"></script>
     </body>
 </html>

@@ -1,0 +1,46 @@
+.home-part1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--bg-light);
+    gap: 25px;
+}
+
+.events, .current-weather, .weather-forecast {    
+   
+}
+
+.current-weather {
+    width: 240px;    
+}
+.current-weather h3 {
+    
+}
+.header-title {    
+    padding: 15px 15px 10px;  
+
+}
+
+.business-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.business-item {
+    border: 1px solid var(--black-color);
+}
+
+.business-tagline {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.business-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.business-photo, .business-info {
+    flex: auto;
+}
