@@ -54,8 +54,32 @@ function currentDiscoveryWeather() {
         });
   }
 
+const userVisitMessage = () => {
+    let welcomeDisplay = document.getElementById('welcome-message');
+    let welcomeMessage = `Welcome! Let us know if you have any questions.`;
+    let currentUserVisit = localStorage.getItem('micr_is_user_visited');
+    let currentLastDateVisited = localStorage.getItem('micr_user_datevisit');
+
+    let isVisited = currentUserVisit !== null;
+
+    
+    let dateVisit = Date.now();
+    if( !isVisited ) {
+        localStorage.setItem('micr_is_user_visited', true);
+    }
+
+    localStorage.setItem('micr_user_datevisit', dateVisit);
+
+    // localStorage.clear();
+    console.log( localStorage );
+    
+
+    welcomeDisplay.innerHTML = welcomeMessage;
+}
+
 
 window.onload = function() {
     currentDiscoveryWeather();
+    userVisitMessage();
 }
 

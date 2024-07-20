@@ -156,9 +156,12 @@ section img {
     /* mix-blend-mode:difference; */
 }
 .welcome-display {    
-    background-color: var(--bg-light);
+    background-color: var(--secondary-color);
+    color: var(--black-color);
     padding: 10px 25px;
     border-radius: 25px;
+    font-weight: bold;
+
 }
 .weather-display{
     display: flex;
@@ -186,8 +189,9 @@ section img {
     margin-bottom: 50px;
 }
 .photo-list figcaption {    
+    position: relative;   
     margin-top: -125px;
-    margin-left: 15px;    
+    margin-left: 35px;    
     background-color: var(--white-color);
     padding: 25px 35px;
     width: 320px;
