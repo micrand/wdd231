@@ -36,7 +36,7 @@ function currentDiscoveryWeather() {
         .then(function(data) {
             //console.log( data );    
             let iconCode = data.weather[0].icon;
-            var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+            var iconUrl = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
             let iconMainText = data.weather[0].main;
             let iconDescText = data.weather[0].main;
             currentWeatherData += '<ul class="weather-info">';
