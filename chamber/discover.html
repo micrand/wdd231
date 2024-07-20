@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
+    <head>        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>
@@ -11,36 +11,22 @@
         <meta name="description" content="WDD 231 Chamber Discover, Web frontend development I Randriamihaja Mickael">
         <meta property="og:title" content=WDD 231 Chamber Discover page - Web Frontend development I - Randriamihaja Mickael>
         <meta property="og:site_name" content=Mickael Project>
-        <meta property="og:url" content=http://127.0.0.1:5500/chamber/discovery.html>
+        <meta property="og:url" content="/chamber/discovery.html">
         <meta property="og:description" content=WDD 231 Chamber Discovery, Web frontend development I Randriamihaja Mickael>
         <meta property="og:type" content="">
         <meta property="og:image" content=http://127.0.0.1:5500/chamber/images/business-3080799_1280.png>
-        <meta name="author" content="Randriamihaja Mickael">                     
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;500&display=swap" rel="stylesheet"> -->
-        <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" -->
-        <link href="styles/chamber-large.css" rel="stylesheet">
-        <link href="styles/chamber.css" rel="stylesheet">
-        <!-- <script type="text/javascript" src="https://theysaidso.com/gadgets/v3/theysaidso.js"></script> -->
-        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js' defer></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              var calendarEl = document.getElementById('calendar');
-              var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                lazyFetching: true,
-              });
-              calendar.render();
-            });      
-        </script>
+        <meta name="author" content="Randriamihaja Mickael">                                     
+        <!-- <link href="styles/chamber.css" rel="stylesheet">
+        <link href="styles/chamber-large.css" rel="stylesheet"> -->
+        <link href="styles/chamber.min.css" rel="stylesheet">
+        <!-- <script type="text/javascript" src="https://theysaidso.com/gadgets/v3/theysaidso.js"></script> -->        
     </head>
     <body>       
         <header class="mx-auto bg-light">
             <div class="container-md top-header">
                 <div class="logo">                    
                     <a href="">
-                        <img src="images/chamber-ampitatafika.svg" alt="" width="120">
+                        <img src="images/chamber-ampitatafika.svg" loading="lazy" alt="Chamber of Commerce Ampitatafika" width="120">
                     </a>
                 </div>
                 <div class="slogan">
@@ -83,7 +69,7 @@
                         <h2 class="heading-title">Chamber business news here !</h2>
                         <div class="sidebar-content business-outlet">
                             <figure>                            
-                                <img src="images/discover/business-5475663_1280.webp" loading="lazy" alt="Hot news in Chamber!" class="mix-blend-difference shape-outside" />
+                                <img src="images/directory-business.webp" loading="lazy" alt="Hot news in Chamber!" class="mix-blend-difference shape-outside" width="300" />
                                 <figcaption class="business-outlet-info">
                                     Hot business news in Chamber!
                                 </figcaption>
@@ -105,19 +91,19 @@
                 </div>
                 <div class="content photo-list">
                     <figure>                            
-                        <img src="images/discover/job-5382501_1280.webp" loading="lazy" alt="Business meeting workspace for members" />
+                        <img src="images/discover/job-5382501_1280.webp" loading="lazy" alt="Business meeting workspace for members" width="769" />
                         <figcaption>
                             Business meeting workspace for members
                         </figcaption>
                     </figure>
                     <figure>                            
-                        <img src="images/discover/business-582912_1280.webp" loading="lazy" alt="Tools and notebook for business makers" />
+                        <img src="images/discover/business-582912_1280.webp" loading="lazy" alt="Tools and notebook for business makers" width="769" />
                         <figcaption>
                             Tools and notebook for business makers
                         </figcaption>
                     </figure>
                     <figure>                            
-                        <img src="images/discover/magnifier-5245329_1280.webp" loading="lazy" alt="Hot news in Chamber!" />
+                        <img src="images/discover/magnifier-5245329_1280.webp" loading="lazy" alt="Hot news in Chamber!" width="769" />
                         <figcaption>
                             Business magnifier directory research!
                         </figcaption>
@@ -129,13 +115,13 @@
                         </figcaption>
                     </figure>
                     <figure>                            
-                        <img src="images/discover/brainstorming-441010_1280.webp" loading="lazy" alt="Business insights and brainstorming, leveling new business ideas" />
+                        <img src="images/discover/brainstorming-441010_1280.webp" loading="lazy" alt="Business insights and brainstorming, leveling new business ideas" width="769" />
                         <figcaption>
                             Business insights and brainstorming, leveling new business ideas
                         </figcaption>
                     </figure>
                     <figure>                            
-                        <img src="images/discover/business-5475659_1280.webp" loading="lazy" alt="Member visibility in local and external business related directories" />
+                        <img src="images/discover/business-5475659_1280.webp" loading="lazy" alt="Member visibility in local and external business related directories" width="769" />
                         <figcaption>
                             Member visibility in local and external business related directories
                         </figcaption>
@@ -150,7 +136,19 @@
                 Last Modification: <span id="lastmodified"></span><br>
                 Images resource from <a href="https://www.pixabay.com" target="_blank">Pixabay</a>
             </div>
-        </footer>                
-        <script src="scripts/main.js"></script>
+        </footer>                        
+        <!-- <script src="scripts/main.js"></script> -->
+        <script src="scripts/main.min.js"></script>
+        <!-- <script src="scripts/libs/fullcalendar/index.global.min.js" defer></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var calendarEl = document.getElementById('calendar');
+              var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                lazyFetching: true,
+              });
+              calendar.render();
+            });      
+        </script> -->
     </body>
 </html>

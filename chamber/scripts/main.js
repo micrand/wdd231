@@ -57,18 +57,5 @@ function currentDiscoveryWeather() {
 
 window.onload = function() {
     currentDiscoveryWeather();
-    let queryQuoteWrapper = document.querySelector('.quote-wrapper');
-    let TheySaidSoHTML = `<div class="tso_default_style">
-                                <script>TheySaidSo.render({ quote_id : 'VsevE5h3LUUiZedYPKPwlweF'})</script>
-                            </div>`;
-    //queryQuoteWrapper.innerHTML = TheySaidSoHTML;
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        });
-        calendar.render();
-      });      
 }
 
