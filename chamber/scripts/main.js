@@ -57,22 +57,34 @@ function currentDiscoveryWeather() {
 const userVisitMessage = () => {
     let welcomeDisplay = document.getElementById('welcome-message');
     let welcomeMessage = `Welcome! Let us know if you have any questions.`;
-    let currentUserVisit = localStorage.getItem('micr_is_user_visited');
-    let currentLastDateVisited = localStorage.getItem('micr_user_datevisit');
+    let currentUserVisit = localStorage.getItem('micr_is_user_visited');    
+    let userLastDateVisited = localStorage.getItem('micr_user_datevisit');
 
     let isVisited = currentUserVisit !== null;
-
     
-    let dateVisit = Date.now();
+    let userDateVisitNow = Date.now();
+
+    let userDateVisitDiff = userDateVisitNow - userLastDateVisited;
+    //console.log( userDateVisitDiff );
+
+    let intervalHourVisit = new Date( userDateVisitDiff ).getHours();
+
     if( !isVisited ) {
         localStorage.setItem('micr_is_user_visited', true);
     }
 
-    localStorage.setItem('micr_user_datevisit', dateVisit);
+    localStorage.setItem('micr_user_datevisit', userLastDateVisited);
+
+    if( intervalHourVisit > 0 && intervalHourVisit < 24)
+    {
+        welcomeMessage = `Back so soon! Awesome!`;
+    }
+    else if(intervalHourVisit>24){
+        welcomeMessage = `You last visited ${intervalHourVisit} hours ago`;
+    }
 
     // localStorage.clear();
-    console.log( localStorage );
-    
+    //console.log( localStorage );   
 
     welcomeDisplay.innerHTML = welcomeMessage;
 }

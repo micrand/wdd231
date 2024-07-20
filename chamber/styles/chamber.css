@@ -35,7 +35,11 @@ body {
     box-sizing: border-box;
 }
 a {
+    color: var(--primary-color);
     text-decoration: none;
+}
+a:visited{
+    color: var(--secondary-color);
 }
 .bg-light {
     background-color: var(--bg-light);    
@@ -139,6 +143,7 @@ section img {
     background-color: var(--light-color);
 }
 .sidebar-item {
+    border: 1px solid var(--bg-light);
     margin-bottom: 25px;
 }
 .sidebar-content {
@@ -151,6 +156,20 @@ section img {
     position: relative;
     top: 5px;
     left: 25px;
+}
+.stat-business li {
+    list-style-type: none;
+}
+.stat-business span {
+    font-weight: 600;
+    margin-right: 25px;
+}
+.stat-business li::before {    
+    content: "❎";
+}
+.mix-image-effect {
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px 150px !important;
 }
 .mix-blend-difference {
     /* mix-blend-mode:difference; */
@@ -198,15 +217,14 @@ section img {
 }
 
 
-
 footer {
     color: var(--white-color);
     text-align: center;
     background-color: var(--black-color);
     padding: 25px 50px;
 }
-.footer .link-color {
-    color: var(--white-color);
+.link-color {
+    color: var(--secondary-color) !important;
 }
 .mt20 {
     margin-top: 20px;
@@ -262,6 +280,11 @@ footer {
 
     .title-header {
         margin: 15px 25px;
+    }
+
+    .mix-image-effect {
+        border: 0;
+        border-radius: 0 !important;
     }
 
 }
