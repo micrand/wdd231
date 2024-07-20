@@ -201,6 +201,9 @@ footer {
     background-color: var(--black-color);
     padding: 25px 50px;
 }
+.footer .link-color {
+    color: var(--white-color);
+}
 .mt20 {
     margin-top: 20px;
 }
