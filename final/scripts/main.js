@@ -19,7 +19,7 @@ hamButton.addEventListener('click', () => {
 //const testimonialUrl = '/final/data/testimonial.json';
 //const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
 //const newsApiUrl = '/final/data/us.json';
-const newsApiUrl = '/wdd231/final/data/us.json';
+const newsApiUrl = 'https://micrand.github.io/wdd231/final/data/us.json';
 const testimonialUrl = '/wdd231/final/data/testimonial.json';
 
 async function testimonialFetch() {
