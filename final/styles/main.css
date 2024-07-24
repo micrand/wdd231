@@ -1833,7 +1833,7 @@ margin-top: -40px;
 }
 
 #footer .link-list li {	
-	border-bottom: 1px solid 1px var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
 }
 
 #footer .link-list li a:hover {
