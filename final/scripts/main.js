@@ -16,7 +16,7 @@ hamButton.addEventListener('click', () => {
 });
 
 //URL TO REPLACE ON PROD
-const testimonialUrl = '/final/data/testimonial.json';
+const testimonialUrl = '/wdd231/final/data/testimonial.json';
 const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
 
 async function testimonialFetch() {
