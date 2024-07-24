@@ -1,3 +1,12 @@
+const d = new Date();
+let currentYear = d.getFullYear();
+let outputFullYear = document.querySelector('#currentyear');
+let outputLastModified = document.querySelector('#lastmodified');
+let lastModifiedDate = document.lastModified;
+
+outputFullYear.innerHTML = `${currentYear}`;
+outputLastModified.innerHTML = `${lastModifiedDate}`;
+
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
@@ -11,7 +20,7 @@ const testimonialUrl = 'http://127.0.0.1:5500/final/data/testimonial.json';
 const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
 
 async function testimonialFetch() {
-
+	console.log(" before fetch ");
 	try {
 
 		const response = await fetch(testimonialUrl);
@@ -24,25 +33,20 @@ async function testimonialFetch() {
 
 		const testimonialBlock = document.querySelector('#testimonials');
 
-		const testimonialHTML = '';
+		let testimonialHTML = '';
+		let count = '';
 
 		testimonialDataJson.forEach( (customer) => {
 
-			//console.log( customer );
-
-			testimonialHTML +=`<li><img src="${projectUrl}" alt="" />`;
-			testimonialHTML +=`<p>"Neque nisidapibus mattis"</p>`;
-			testimonialHTML +=`<span>Jane Doe, CEO of UntitledCorp</span></li>`;
-			testimonialBlock.appendChild(testimonialHTML);
-
+			count++;
+			if(count<=2) {
+				testimonialHTML +=`<li><img src="${customer.avatar}" alt="${customer.name}" />`;
+				testimonialHTML +=`<p>"${customer.message}"</p>`;
+				testimonialHTML +=`<span>${customer.name}, ${customer.designation}</span></li>`;
+			}
 		});
 
-		
-
-		//testimonialBlock.innerHTML = testimonialHTML;
-
-
-
+		testimonialBlock.innerHTML = testimonialHTML;
 	}
 	catch(error){
 

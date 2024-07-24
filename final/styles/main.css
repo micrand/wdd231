@@ -1490,6 +1490,11 @@ margin-top: -40px;
 	overflow: hidden;
 }
 
+.testimonial-list img {
+	width: 25%;
+	border-radius: 50px;
+}
+
 .testimonial-list li:first-child {
 	padding-top: 0 !important;
 	border-top: 0 !important;
