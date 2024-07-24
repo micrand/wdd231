@@ -1,191 +1,173 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="en-us">
 	<head>
-		<title>WDD231 Final project Site plan - Markedia - Mickael Randriamihaja</title>
+		<title>Video Presentation about Innnovative Digital marketing agency - Markedia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="keyword" content="WDD231, file and name convention, css normalization, css specificity, github, javascript review, Web frontend development I, BYU-Idaho">
-        <meta name="description" content="WDD 231 - Web frontend development I - W01 CSS and javascript Reviews - Randriamihaja Mickael">
-        <meta name="author" content="Randriamihaja Mickael">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles/main.css" />
-		<script src="scripts/main.js" defer></script>
+		<meta name="keyword" content="Digital marketing agency, Markedia, file and name convention, css normalization, css specificity, github, javascript review, Web frontend development I, BYU-Idaho">
+        <meta name="description" content="Markedia is Individual project for Web frontend development I - Markedia - Digital marketing agency for WDD231 by Randriamihaja Mickael">
+        <meta name="author" content="Randriamihaja Mickael"> 
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">		
+		<!-- <link rel="stylesheet" href="styles/main.css" /> -->
+		<link rel="stylesheet" href="styles/main.min.css" />
 	</head>
 	<body class="subpage">
 		<div id="page-wrapper">
+			<div class="menu-mobile">
+				<button id="menu" name="mobile-menu" title="Mobile menu"></button>
+				<nav class="navigation">
+					<a href="index.html">Home</a>
+					<a href="about.html" class="active">About</a>
+					<a href="solutions.html">Our solutions</a>
+					<a href="blog.html">Blog</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
 			<header id="header">
 				<div class="container">
 					<div class="row">
-						<div class="col-12">							
-							<h1><a href="#" id="logo"><img src="images/logo-markedia.png" loading="lazy" width="250" alt="Markedia - Marketing digital agency" /></a></h1>
+						<div class="col-12">
+							<h1>
+								<a href="index.html" id="logo">									
+									<img src="images/logo-markedia.webp" loading="lazy" width="250" alt="Markedia - Marketing digital agency" />	
+								</a>
+							</h1>
 							<button id="menu"></button>
-							<nav id="nav" class="navigation">
-								<a href="#" class="active">Site plan</a>
-								<a href="#">Services</a>
-								<a href="#">About</a>
-								<a href="#">Blog</a>
-								<a href="#">Contact</a>
+							<nav id="nav"  class="navigation">
+								<a href="index.html">Home</a>
+								<a href="about.html" class="active">About</a>
+								<a href="solutions.html">Our solutions</a>
+								<a href="blog.html">Blog</a>
+								<a href="contact.html">Contact</a>
 							</nav>
 						</div>
 					</div>
 				</div>
 			</header>
 			
-			<section id="content">
+			<div id="content">
 				<div class="container">
 					<div class="row">
-						<div class="col-12">
+						<div class="col-3 col-12-medium">
 
-							<!-- Main Content -->
+							<!-- Sidebar -->
+								<section>
+									<header>
+										<h2>Our services</h2>
+									</header>
+									<ul class="link-list">
+										<li><a href="#">Digital marketing</a></li>
+										<li><a href="#">Content marketing</a></li>
+										<li><a href="#">Social media marketing</a></li>
+										<li><a href="#">Web design</a></li>
+										<li><a href="#">Web development</a></li>
+										<li><a href="#">Mobile development</a></li>
+									</ul>
+								</section>
+								<section>
+									<header>
+										<h2>At Markedia</h2>
+									</header>
+									<p>
+										...We fuse innovative design with advanced technology to create compelling web experiences.
+									</p>
+									<ul class="link-list">
+										<li><a href="contact.html?action=ask_for_quotation">Ask for a quotation</a></li>
+										<li><a href="contact.html">Contact us</a></li>							
+									</ul>
+								</section>
+
+						</div>
+						<div class="col-9 col-12-medium reverse-medium">
+							
 							<section>
 								<header>
-									<h2>Site Plan</h2>										
+									<h2>Markedia, Creative and impactful marketing digital agency</h2>
+									<h3>Your business partner online</h3>
 								</header>
-								<h3>Site Name : Markedia</h3>
-								<p>
-									Website of a digital marketing agency which offers full-service of web marketing and conversion to boost customer growth.
-								</p>
-								<h3>Site purpose</h3>	
-								<p>This website will promote a virtual company in digital marketing that aims to offer 
-								services worldwide. It serves to display the information related to the company services 
-								and solutions, contact and form to quotations. It also contains funnels to collect 
-								data through popups and forms for further marketing purposes.</p>
-								<p>
-									I chose this topic because I would like to apply all the lessons learned in this course 
-									to a project related to my domain of predilection which is digital creation. 
-									From modern html and css development, to javascript modularization and data fetching, 
-									I will practice all along this project development. It will be a good purpose for applying 
-									and testing accessibility, performance and other web quality recommandations.
-								</p>
-								<h3>Scenarios</h3>
-								
-								<h4>Who are the main audience of the project?</h4>
-								<p>This virtual digital market targets specific audiences, those who have interests in promoting their services and products on the web and social networks.
-								</p>
-
-								<h4>What services the Markedia virtual agency will offer?</h4>
-								<p>There are various digital services such as: digital marketing, ecommerce and content marketing, design and web development, social media marketing.
-								</p>
-
-								<h4>Through what means does the website use to collect customer informations?</h4>
-								<p>Forms (quotation and contact forms), popup (newsletter), localStorage and cookies.
-								</p>
-								<h3>Color Schemas</h3>
-								<p>
-									<span class="box-color primary-color"></span> Primary color: blue  (00bbf9) <br>
-									The primary color will be used in logo, main headings such as h2, buttons
-									<hr>
-									<span class="box-color secondary-color"></span> Secondary color: yellow (#fee440)<br>	
-									The secondary color will be used in some part of logo, secondary headings such as h3 and block background.									
-									<hr>
-									<span class="box-color tertiary-color"></span> Tertiary color: pink (#f15bb5)<br>	
-									The tertiary color will be used in some part of logo as well, in button hover, and some links									
-									<hr>
-									<span class="box-color accent-color"></span> Accent color 1: violet (#9b5de5)<br>										
-									To accent some button and link backgrounds, some title and block
-									<hr>
-									<span class="box-color accent2-color"></span> Accent color 2 : green (#00f5d4)<br>
-									To accent some button and link backgrounds on hover
-								</p>
-								<h3>Typography</h3>
-								<p class="open-sans">
-									<strong>Open Sans</strong> from Google fonts is used as main font for this project.									
-								</p>
-								<h3>Wireframe</h3>
-								<p>
-									Here below are the wireframe for the mobile and desktop versions.
-								</p>
-								<div class="col-6">
-									<div class="row">
-										<div class="col-6">
-											<img src="images/mobile1.png" width="240" alt="Mobile" />
-											<h4 class="aln-center">Wireframe Mobile</h4>
-										</div>
-										
-										<div class="col-6">										
-											<img src="images/desktop.png" width="480" alt="Desktop" />
-											<h4 class="aln-center">Wireframe Desktop</h4>
-										</div>
-									
-									</div>
-									
-								</div>
+								<!-- Video persentation -->
+								<video src="video-presentation.mp4" width="576" height="278" autoplay>
+									Votre navigateur ne permet pas de lire les vidéos. Mais vous pouvez toujours
+									<a href="fvideo-presentation.mp4">la télécharger</a> !
+								</video>
 							</section>
 
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
 						<div class="col-8 col-12-medium">
-
-							<!-- Links -->
 							<section>
-								<h2>Links to Important Stuff</h2>
+								<h3>Insights and useful links</h3>
 								<div>
 									<div class="row">
 										<div class="col-3 col-12-small">
 											<ul class="link-list last-child">
-												<li><a href="#">Auis pellentesque quam malesuada</a></li>
-												<li><a href="#">Sed mattis quis rutrum</a></li>
-												<li><a href="#">Accumsan suspendisse</a></li>
-												<li><a href="#">Eu varius vitae magna</a></li>
+												<li><a href="#">Digital marketing agency</a></li>
+												<li><a href="#">Web solutions</a></li>
+												<li><a href="#">Creative ideas</a></li>
+												<li><a href="#">Build and develop</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-12-small">
 											<ul class="link-list last-child">
-												<li><a href="#">Quis pellentesque quam malesuada</a></li>
-												<li><a href="#">Sed mattis quis rutrum</a></li>
-												<li><a href="#">Accumsan suspendisse</a></li>
-												<li><a href="#">Eu varius vitae magna</a></li>
+												<li><a href="#">Digital marketing agency</a></li>
+												<li><a href="#">Web solutions</a></li>
+												<li><a href="#">Creative ideas</a></li>
+												<li><a href="#">Build and develop</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-12-small">
 											<ul class="link-list last-child">
-												<li><a href="#">Neque amet dapibus</a></li>
-												<li><a href="#">Sed mattis quis rutrum</a></li>
-												<li><a href="#">Accumsan suspendisse</a></li>
-												<li><a href="#">Eu varius vitae magna</a></li>
+												<li><a href="#">Ask for quotation</a></li>
+												<li><a href="#">Partner with us</a></li>
+												<li><a href="#">Careers</a></li>
+												<li><a href="#">Advertisers</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-12-small">
 											<ul class="link-list last-child">
-												<li><a href="#">Nulla aliquet dui neque</a></li>
-												<li><a href="#">Sed mattis quis rutrum</a></li>
-												<li><a href="#">Accumsan suspendisse</a></li>
-												<li><a href="#">Eu varius vitae magna</a></li>
+												<li><a href="#">Cookie policy</a></li>
+												<li><a href="#">Privacy policies</a></li>
+												<li><a href="#">Terms and conditions</a></li>												
+												<li><a href="#">Contact us</a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</section>
-
 						</div>
-						<div class="col-4 col-12-medium imp-medium">
+						<div class="col-4 col-12-medium reverse-medium">
 							<section>
-								<h2>Website short description</h2>
-								<p>
-									Suspendisse potenti. Nulla aliquet dui neque, quis pellentesque quam malesuada eu. 
-									Sed condimentum iaculis leo. Curabitur faucibus mattis molestie. 
-									Duis dictum accumsan enim a viverra.
+								<h3>Stay tune and let's connect</h3>
+								<p class="text-subscription">
+									We help you reach your target consumers and maximize ROI by delivering incremental performance, 
+									enhanced operational efficiency and dedicated service for your business.
 								</p>
+								<div class="newsletter-wrapper" id="newsletter-wrapper">
+									<form name="newsletter-form" class="newsletter-form" method="post" action="#">
+										<input type="email" placeholder="Newsletter" name="newsletter" class="newsletter" id="newsletter" />
+										<button type="button" name="subscribe-newsletter" id="subscribe-newsletter" class="subscribe-newsletter btn-primary f-bold">Subscribe</button>
+									</form>
+								</div>
 							</section>
+
 						</div>
 					</div>
 				</div>
 			</footer>
 
-			<!-- copyright -->
 			<div id="copyright">
-				&copy; Mickael Randriamihaja. Final Project WDD231.
+				&copy; <span id="currentyear"></span> Mickael Randriamihaja. Individual Final Project WDD231.<br>
+				Last modified: <span id="lastmodified"></span>
 			</div>
 
 		</div>
+		<!-- <script src="scripts/main.js"></script> -->
+		<script src="scripts/main.min.js"></script>
 	</body>
 </html>
