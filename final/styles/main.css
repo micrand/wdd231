@@ -259,6 +259,30 @@ input, select, textarea {
 .form-row button {
 	cursor: pointer;
 }
+
+.form-confirmation {
+	background-color: var(--secondary-color);
+	padding: 15px 25px;
+}
+
+.newsletter-message {
+	position: relative;
+	margin-left: 25px;	
+	font-weight: 700;
+	padding: 15px;
+}
+.reset-newsletter {
+	float:right;
+	position:relative;
+	top: 0;
+	right: 0;	
+	padding: 5px;
+	background-color: var(--secondary-color);
+	color: var(--black-color);	
+	text-align: center;
+	font-weight: 900;
+	cursor: pointer;
+}
 .quotation {
 	padding: 5px 25px;
 	background-color: var(--accent2-color);

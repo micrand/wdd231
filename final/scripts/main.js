@@ -103,12 +103,36 @@ const sendContactForm = () => {
 	let lastName = document.getElementById('lastname');
 	let emailAddress = document.getElementById('email');
 	let subject = document.getElementById('subject');
-	let content = document.getElementById('content');	
+	let content = document.getElementById('content');
+	let company = document.getElementById('company');
+	let projectType = document.getElementById('project-type');
 
-	console.log( subject.value );
+	let formBlock = document.getElementById('form-content');
+	
+	if( subject.value != "" ){
 
-	if(!subject.value){
-		console.log( "return error!!!");
+		let confirmBlock = document.createElement('div');
+
+
+		let confirmBlockHTML = `<div class="form-confirmation">`;
+		confirmBlockHTML += `<h4>Thank you for your contact.</h4>`;
+		confirmBlockHTML += `We received your information:<br><br>`;
+		confirmBlockHTML += `Name: ${firstName.value}<br>`;
+		confirmBlockHTML += `Last name: ${lastName.value}<br>`;
+		confirmBlockHTML += `Email: ${emailAddress.value}<br>`;
+		confirmBlockHTML += `Subject: ${subject.value}<br>`;
+		confirmBlockHTML += `Content: ${content.value}<br><br>`;
+		confirmBlockHTML += `Company: ${company.value}<br><br>`;
+		confirmBlockHTML += `Project Type: ${projectType.value}<br><br>`;
+		confirmBlockHTML += `We will be back to you later!<br>`;
+		confirmBlockHTML += `Makerdia Team`;
+		confirmBlockHTML += `</div>`;
+
+		confirmBlock.setAttribute( 'class', 'form-confirmation' );
+		console.dir( confirmBlockHTML );
+
+		formBlock.innerHTML = confirmBlockHTML ;
+		
 	}
 
 
@@ -132,6 +156,70 @@ if(sendContact) {
 	})
 }
 
+let newsletterButton = document.getElementById('subscribe-newsletter');
+
+let currentStoredSubscription = localStorage.getItem( 'mkd_newsletter_subscribed' );
+
+
+console.log( "cur: " + currentStoredSubscription)
+if( newsletterButton ) {
+
+	let newsletterForm = document.querySelector('.newsletter-form');
+	let newsletterWrapper = document.getElementById('newsletter-wrapper');
+
+	if( currentStoredSubscription !== null ) {
+
+		
+		// newsletterForm.style.display = 'none';
+		let currentEmailSubscription = localStorage.getItem( 'mkd_newsletter_email' );
+
+		if(currentEmailSubscription != "") {			
+			newsletterWrapper.innerHTML = `<div class="newsletter-message bg-primary">You are now subscribed with the email:<br> ${currentEmailSubscription}`;
+			newsletterWrapper.innerHTML += `<span class="reset-newsletter" id="reset-newsletter">Reset subscription</span></div>`;
+		}	
+
+	}	
+
+	let resetNewsletter = document.getElementById('reset-newsletter');
+	if( resetNewsletter ) {
+
+		resetNewsletter.addEventListener( 'click', function(){
+
+			var confirmReset = confirm("Are you sure to reset your subscription?");
+
+			if(confirmReset){
+				localStorage.removeItem( 'mkd_newsletter_subscribed' );
+				localStorage.removeItem( 'mkd_newsletter_email' );
+				localStorage.clear();
+				newsletterForm.style.display = 'block';
+				// resetNewsletter.remove();
+			}
+			
+
+		});
+	}
+
+}
+
+
+
+
+if(newsletterButton){
+	newsletterButton.addEventListener('click', function(e){
+		e.preventDefault();
+		let newEmailSubscription = document.getElementById('newsletter');
+
+		if(newEmailSubscription.value!=""){
+
+			localStorage.setItem( 'mkd_newsletter_subscribed', true );
+			localStorage.setItem( 'mkd_newsletter_email', newEmailSubscription.value );		
+			let textSubscription = document.querySelector('.text-subscription');
+			textSubscription.innerHTML = "Thank you for your subscription!";
+		}
+		
+
+	});
+}
 
 window.onload = function(){
 

@@ -78,62 +78,64 @@
 									<h3>Your business partner online</h3>
 								</header>
 								<div class="contact-form-wrapper">
-									<form class="contact-form">
-										<div class="form-row">
-											<label for="firstname">First name</label> <input type="text" name="firstname" class="form-input" placeholder="Your firstname" id="firstname" required />
-										</div>
-										<div class="form-row">
-											<label for="lastname">Name</label> <input type="text" name="last" class="form-input" placeholder="Your name" id="lastname" />
-										</div>
-										<div class="form-row">
-											<label for="company">Company</label>
-											<input type="text" name="company" id="company" class="form-input" placeholder="Your company name if exists" />
-										</div>
-										<div class="form-row">
-											<label for="telephone">Phone number</label> <input type="tel" name="telephone" class="form-input" placeholder="(1)-123-456-7890" id="telephone" />
-										</div>
-										<div class="form-row">
-											<label for="email">Email</label> <input type="email" name="email" class="form-input" placeholder="email@address.com" id="email" required />
-										</div>
-										<div class="form-row">
-											<label for="subject">Subject</label>
-											<select name="subject" id="subject">
-												<option value="">Select option</option>
-												<option value="enquiry">Ask for quotation</option>
-												<option value="launch">Launch project with Markedia</option>
-												<option value="sponsor">Sponsoring / Partnership</option>
-												<option value="webmaster">Contact the webmaster</option>
-												<option value="misc">Other</option>
-											</select>
-										</div>
-										<div class="quotation d-none" id="quotation">
-											<h4 class="tell-us">Great! Please tell us more about your project:</h4>
+									<div id="form-content">
+										<form class="contact-form" id="contact-form">
 											<div class="form-row">
-												<label for="project-type">Project type:</label>
-												<select name="project-type" id="type">
+												<label for="firstname">First name</label> <input type="text" name="firstname" class="form-input" placeholder="Your firstname" id="firstname" autocomplete="given-name" required />
+											</div>
+											<div class="form-row">
+												<label for="lastname">Name</label> <input type="text" name="last" class="form-input" placeholder="Your name" id="lastname" autocomplete="family-name" />
+											</div>
+											<div class="form-row">
+												<label for="company">Company</label>
+												<input type="text" name="company" id="company" class="form-input" placeholder="Your company name if exists" />
+											</div>
+											<div class="form-row">
+												<label for="telephone">Phone number</label> <input type="tel" name="telephone" class="form-input" placeholder="(1)-123-456-7890" id="telephone" />
+											</div>
+											<div class="form-row">
+												<label for="email">Email</label> <input type="email" name="email" class="form-input" placeholder="email@address.com" id="email" autocomplete="off" required />
+											</div>
+											<div class="form-row">
+												<label for="subject">Subject</label>
+												<select name="subject" id="subject">
 													<option value="">Select option</option>
-													<option value="blog">Blog</option>
-													<option value="business">Business</option>
-													<option value="portfolio">Portfolio</option>
-													<option value="ecommerce">Ecommerce</option>
-													<option value="corporate">Corporate</option>
-													<option value="webmaster">Non profil website</option>
+													<option value="enquiry">Ask for quotation</option>
+													<option value="launch">Launch project with Markedia</option>
+													<option value="sponsor">Sponsoring / Partnership</option>
+													<option value="webmaster">Contact the webmaster</option>
 													<option value="misc">Other</option>
 												</select>
 											</div>
-											<div class="form-row">
-												<label>Desired budget:</label>
-												<input type="number" class="form-input" min="500" id="budget" placeholder="Your desired budget" />
+											<div class="quotation d-none" id="quotation">
+												<h4 class="tell-us">Great! Please tell us more about your project:</h4>
+												<div class="form-row">
+													<label for="project-type">Project type:</label>
+													<select name="project-type" id="project-type">
+														<option value="">Select option</option>
+														<option value="blog">Blog</option>
+														<option value="business">Business</option>
+														<option value="portfolio">Portfolio</option>
+														<option value="ecommerce">Ecommerce</option>
+														<option value="corporate">Corporate</option>
+														<option value="webmaster">Non profil website</option>
+														<option value="misc">Other</option>
+													</select>
+												</div>
+												<div class="form-row">
+													<label>Desired budget:</label>
+													<input type="number" class="form-input" min="500" id="budget" placeholder="Your desired budget" />
+												</div>
 											</div>
-										</div>
-										<div class="form-row">
-											<label for="content-message">Message:</label>
-											<textarea name="content" id="content-message" class="form-input" placeholder="Drop us lines here.	"></textarea>
-										</div>
-										<div class="form-row row align-right mt-25">
-											<button class="btn btn-primary" type="button" id="send-contact">Send information</button>
-										</div>
-									</form>
+											<div class="form-row">
+												<label for="content-message">Message:</label>
+												<textarea name="content" id="content-message" class="form-input" placeholder="Drop us lines here.	"></textarea>
+											</div>
+											<div class="form-row row align-right mt-25">
+												<button class="btn btn-primary" type="button" id="send-contact">Send information</button>
+											</div>
+										</form>
+									</div>
 								</div>
 								
 							</section>
@@ -190,14 +192,14 @@
 						<div class="col-4 col-12-medium reverse-medium">
 							<section>
 								<h3>Stay tune and let's connect</h3>
-								<p>
+								<p class="text-subscription">
 									We help you reach your target consumers and maximize ROI by delivering incremental performance, 
 									enhanced operational efficiency and dedicated service for your business.
 								</p>
-								<div>
-									<form class="newsletter-form" method="post" action="#">
-										<input type="email" placeholder="Newsletter" name="newsletter" class="newsletter" />
-										<button type="submit" name="subscribe-newsletter" class="subscribe-newsletter btn-primary f-bold">Subscribe</button>
+								<div class="newsletter-wrapper" id="newsletter-wrapper">
+									<form name="newsletter-form" class="newsletter-form" method="post" action="#">
+										<input type="email" placeholder="Newsletter" name="newsletter" class="newsletter" id="newsletter" />
+										<button type="button" name="subscribe-newsletter" id="subscribe-newsletter" class="subscribe-newsletter btn-primary f-bold">Subscribe</button>
 									</form>
 								</div>
 							</section>
