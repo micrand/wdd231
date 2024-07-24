@@ -40,7 +40,7 @@ async function testimonialFetch() {
 
 			count++;
 			if(count<=2) {
-				testimonialHTML +=`<li><img src="${customer.avatar}" alt="${customer.name}" />`;
+				testimonialHTML +=`<li><img src="${customer.avatar}" alt="${customer.name}" width="80" height="80" loading="lazy" />`;
 				testimonialHTML +=`<p>"${customer.message}"</p>`;
 				testimonialHTML +=`<span>${customer.name}, ${customer.designation}</span></li>`;
 			}
