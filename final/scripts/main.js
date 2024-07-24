@@ -17,10 +17,11 @@ hamButton.addEventListener('click', () => {
 
 //URL TO REPLACE ON PROD
 const testimonialUrl = '/wdd231/final/data/testimonial.json';
-const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
+//const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
+const newsApiUrl = '/wdd231/final/data/us.json';
 
 async function testimonialFetch() {
-	console.log(" before fetch ");
+	// console.log(" before fetch ");
 	try {
 
 		const response = await fetch(testimonialUrl);
@@ -161,15 +162,14 @@ let newsletterButton = document.getElementById('subscribe-newsletter');
 let currentStoredSubscription = localStorage.getItem( 'mkd_newsletter_subscribed' );
 
 
-console.log( "cur: " + currentStoredSubscription)
+//console.log( "cur: " + currentStoredSubscription)
 if( newsletterButton ) {
 
 	let newsletterForm = document.querySelector('.newsletter-form');
 	let newsletterWrapper = document.getElementById('newsletter-wrapper');
 
 	if( currentStoredSubscription !== null ) {
-
-		
+				
 		// newsletterForm.style.display = 'none';
 		let currentEmailSubscription = localStorage.getItem( 'mkd_newsletter_email' );
 
