@@ -14,6 +14,16 @@
 	</head>
 	<body class="subpage">
 		<div id="page-wrapper">
+			<div class="menu-mobile">
+				<button id="menu"></button>
+				<nav id="nav"  class="navigation">
+					<a href="index.html" class="active">Home</a>
+					<a href="about.html">About</a>
+					<a href="solutions.html">Our solutions</a>
+					<a href="blog.html">Blog</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
 			<header id="header">
 				<div class="container">
 					<div class="row">
@@ -96,9 +106,29 @@
 												<option value="misc">Other</option>
 											</select>
 										</div>
+										<div class="quotation d-none" id="quotation">
+											<h4 class="tell-us">Great! Please tell us more about your project:</h4>
+											<div class="form-row">
+												<label for="project-type">Project type:</label>
+												<select name="project-type" id="type">
+													<option value="">Select option</option>
+													<option value="blog">Blog</option>
+													<option value="business">Business</option>
+													<option value="portfolio">Portfolio</option>
+													<option value="ecommerce">Ecommerce</option>
+													<option value="corporate">Corporate</option>
+													<option value="webmaster">Non profil website</option>
+													<option value="misc">Other</option>
+												</select>
+											</div>
+											<div class="form-row">
+												<label>Desired budget:</label>
+												<input type="number" class="form-input" min="500" id="budget" placeholder="Your desired budget" />
+											</div>
+										</div>
 										<div class="form-row">
-											<label for="content-message"></label>
-											<textarea name="content" id="content-message" class="form-input">Drop us lines here.</textarea>
+											<label for="content-message">Message:</label>
+											<textarea name="content" id="content-message" class="form-input" placeholder="Drop us lines here.	"></textarea>
 										</div>
 										<div class="form-row row align-right mt-25">
 											<button class="btn btn-primary" type="button" id="send-contact">Send information</button>
@@ -176,7 +206,7 @@
 					</div>
 				</div>
 			</footer>
-			
+
 			<div id="copyright">
 				&copy; <span id="currentyear"></span> Mickael Randriamihaja. Individual Final Project WDD231.<br>
 				Last modified: <span id="lastmodified"></span>

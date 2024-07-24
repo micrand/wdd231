@@ -15,8 +15,8 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-
-const testimonialUrl = 'http://127.0.0.1:5500/final/data/testimonial.json';
+//URL TO REPLACE ON PROD
+const testimonialUrl = '/final/data/testimonial.json';
 const newsApiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json';
 
 async function testimonialFetch() {
@@ -103,18 +103,33 @@ const sendContactForm = () => {
 	let lastName = document.getElementById('lastname');
 	let emailAddress = document.getElementById('email');
 	let subject = document.getElementById('subject');
-	let content = document.getElementById('content');
+	let content = document.getElementById('content');	
+
+	console.log( subject.value );
+
+	if(!subject.value){
+		console.log( "return error!!!");
+	}
 
 
-	
 }
 
 let sendContact = document.getElementById('send-contact');
 if(sendContact) {
 	sendContact.addEventListener( 'click', (e)=>{
 		e.preventDefault();
-		console.log( "yes submitted");
+		sendContactForm();
 	});
+
+	let subject = document.getElementById('subject');
+	subject.addEventListener('change', (e)=>{
+		let currentValue = e.target.value;
+		if( currentValue == 'enquiry' || currentValue == 'launch' ) {
+			document.getElementById('quotation').style.display = 'block';
+		}else{
+			document.getElementById('quotation').style.display = 'none';
+		}
+	})
 }
 
 
@@ -129,4 +144,3 @@ window.onload = function(){
 	}
 	
 };
-
