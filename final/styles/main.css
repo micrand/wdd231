@@ -287,6 +287,9 @@ input, select, textarea {
 	padding: 15px;
 	color: var(--black-color);
 }
+.text-subscription {
+	color:var(--white-color);
+}
 .reset-newsletter {
 	float:right;
 	position:relative;
@@ -1839,7 +1842,7 @@ margin-top: -40px;
 #footer h3 {
 	font-size: 1.25em;
 	font-weight: 900;
-	color: var(--tertiary-color);
+	color: var(--secondary-color);
 	margin: 0 0 1em 0;
 }
 
